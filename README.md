@@ -1,21 +1,22 @@
 
-# Konarr Website (Vite + React + Tailwind)
+# Konarr Website (Divisions Enabled)
 
 ## Quick start
 ```bash
 npm install
 npm run dev
 ```
+Open the URL shown (usually http://localhost:5173).
 
-## Build
-```bash
-npm run build
-npm run preview
-```
+## Routes
+- `/` (Home)
+- `/silicon`
+- `/racing`
+- `/labs`
 
 ## Notes
-- Dark industrial theme to match the provided template.
-- Sections: Hero, Divisions, About, Contact.
-- Tailwind utility classes; tweak `tailwind.config.js` and `src/styles/main.css` to extend the design system.
-- Images are in `src/assets/` and can be swapped for production logos once finalized.
-- This starter is intentionally minimal—ready for routing, CMS, or API integration.
+- Built with Vite + React + TailwindCSS + react-router-dom v6.
+- Division pages use the supplied images:
+  - Silicon → `src/assets/silicon-wafer.png`
+  - Racing → `src/assets/racing-konarr.png`
+  - Labs → `src/assets/labs-3dprint.png`

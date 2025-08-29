@@ -9,7 +9,6 @@ export default function Hero(){
       <div className="absolute inset-0 pointer-events-none [mask-image:linear-gradient(to_bottom,black,transparent)]">
         <img src={maple} alt="" className="opacity-[0.06] w-full h-full object-cover" />
       </div>
-
       <div className="max-w-7xl mx-auto container-px pt-24 pb-20 relative">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
@@ -22,11 +21,10 @@ export default function Hero(){
               We build, test, and ship products that feel inevitable.
             </p>
             <div className="mt-8 flex gap-3">
-              <a className="btn btn-primary" href="#divisions">Explore divisions</a>
-              <a className="btn btn-ghost" href="#contact">Get in touch</a>
+              <a className="btn btn-primary" href="/#divisions">Explore divisions</a>
+              <a className="btn btn-ghost" href="/#contact">Get in touch</a>
             </div>
           </div>
-
           <div className="card p-6">
             <div className="text-white/70 text-sm">Spotlight</div>
             <div className="mt-2 text-xl font-medium">Design language</div>

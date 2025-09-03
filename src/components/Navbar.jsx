@@ -1,23 +1,50 @@
+import React from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import logo from "../assets/konarr-logotype.png";
 
-import React from 'react'
-import { Link } from 'react-router-dom'
-import logo from '../assets/konarr-logotype.png'
+export default function Navbar() {
+  const navigate = useNavigate();
+  const location = useLocation();
 
-export default function Navbar(){
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    
+    if (location.pathname === '/') {
+      // Already on home page, just scroll to contact
+      const contactElement = document.getElementById('contact');
+      if (contactElement) {
+        contactElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to home page first, then scroll
+      navigate('/');
+      setTimeout(() => {
+        const contactElement = document.getElementById('contact');
+        if (contactElement) {
+          contactElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  };
+
   return (
-    <header className="sticky top-0 z-40 bg-black/70 backdrop-blur border-b border-white/10">
-      <nav className="max-w-7xl mx-auto container-px flex items-center justify-between h-16">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Konarr" className="h-6 w-auto" />
+    <nav className="border-b border-white/10 py-4">
+      <div className="max-w-7xl mx-auto container-px flex items-center justify-between">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2">
+          <img src={logo} alt="Konarr Logo" className="h-8 w-auto" />
+          <span className="font-semibold"></span>
         </Link>
-        <div className="hidden md:flex items-center gap-6 text-sm">
-          <a href="/#divisions" className="opacity-80 hover:opacity-100">Divisions</a>
-          <Link to="/silicon" className="opacity-80 hover:opacity-100">Silicon</Link>
-          <Link to="/racing" className="opacity-80 hover:opacity-100">Racing</Link>
-          <Link to="/labs" className="opacity-80 hover:opacity-100">Labs</Link>
+
+        {/* Links */}
+        <div className="flex gap-6 text-sm font-medium">
+          <Link to="/silicon" className="hover:text-white/80">Silicon</Link>
+          <Link to="/racing" className="hover:text-white/80">Racing</Link>
+          <Link to="/labs" className="hover:text-white/80">Labs</Link>
+          <Link to="/store" className="hover:text-white/80">Store</Link>
+          <a href="#contact" onClick={handleContactClick} className="hover:text-white/80 cursor-pointer">Contact</a>
         </div>
-        <a href="/#contact" className="btn btn-primary text-sm">Work with us</a>
-      </nav>
-    </header>
-  )
+      </div>
+    </nav>
+  );
 }

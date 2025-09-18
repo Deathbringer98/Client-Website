@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import raceImg from '../assets/racing-konarr.png'
+import creationsImg from '../assets/3dprintedkonarr.png'
 import StoreNavbar from '../components/StoreNavbar.jsx'
 
 export default function Store() {
@@ -19,10 +20,25 @@ export default function Store() {
               </div>
               <div className="p-4">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-semibold">Konarr Racing</h3>
+                  <h3 className="font-semibold">Konarr Sports</h3>
                   <span className="text-xs text-white/60 uppercase">Shop</span>
                 </div>
                 <p className="text-sm text-white/60 mt-1">Suits, team apparel, and track hardware.</p>
+              </div>
+            </div>
+          </Link>
+          
+          <Link to="/store/creations" className="group">
+            <div className="bg-konarr-card border border-white/10 rounded-2xl overflow-hidden">
+              <div className="aspect-[16/9] bg-black/60">
+                <img src={creationsImg} alt="Konarr Creations" className="w-full h-full object-cover transition-transform group-hover:scale-105" />
+              </div>
+              <div className="p-4">
+                <div className="flex items-center justify-between">
+                  <h3 className="font-semibold">Konarr Creations</h3>
+                  <span className="text-xs text-white/60 uppercase">Shop</span>
+                </div>
+                <p className="text-sm text-white/60 mt-1">3D printing services, CAD design, and custom parts.</p>
               </div>
             </div>
           </Link>

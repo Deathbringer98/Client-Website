@@ -8,6 +8,7 @@ import Racing from './pages/Racing.jsx'
 import Labs from './pages/Labs.jsx'
 import Store from './pages/Store.jsx'
 import RacingStore from './pages/store/RacingStore.jsx'
+import CreationsStore from './pages/store/CreationsStore.jsx'
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <Route path="/labs" element={<Labs />} />
       <Route path="/store" element={<Store />} />
       <Route path="/store/racing" element={<RacingStore />} />
+      <Route path="/store/creations" element={<CreationsStore />} />
     </Routes>
   )
 }

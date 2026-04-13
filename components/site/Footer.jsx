@@ -44,7 +44,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="mt-2 block text-sm text-konarr-accent hover:underline"
           >
-            LinkedIn: Matthew Menchinton
+            Matthew Menchinton on LinkedIn
           </a>
           <p className="mt-5 text-xs text-konarr-muted">Designed for performance. Built for scale.</p>
         </div>

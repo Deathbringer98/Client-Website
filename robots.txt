@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://konarrtech.shop
+Sitemap: https://konarrtech.shop/sitemap.xml

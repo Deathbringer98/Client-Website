@@ -22,6 +22,9 @@ export const metadata = {
   description:
     "Konarr is a Canadian venture group delivering motorsport engineering, CAD + additive manufacturing, software-hardware development, and applied R&D.",
   keywords: ["Konarr", "engineering", "motorsports", "3D printing", "software hardware", "product development"],
+  verification: {
+    google: "5610ad44eedc156f"
+  },
   robots: {
     index: true,
     follow: true,

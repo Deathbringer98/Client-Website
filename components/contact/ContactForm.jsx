@@ -21,37 +21,41 @@ export default function ContactForm() {
     setForm((prev) => ({ ...prev, [name]: value }))
   }
 
-  async function handleSubmit(event) {
+  function handleSubmit(event) {
     event.preventDefault()
+
+    if (form.website.trim()) {
+      setStatus({
+        type: "success",
+        message: "Thanks, your message has been received."
+      })
+      return
+    }
+
     setLoading(true)
     setStatus({ type: "idle", message: "" })
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form)
-      })
+    const subject = encodeURIComponent(`Konarr project inquiry | ${form.division}`)
+    const body = encodeURIComponent(
+      [
+        `Name: ${form.name}`,
+        `Email: ${form.email}`,
+        `Organization: ${form.company || "Not provided"}`,
+        `Division: ${form.division}`,
+        "",
+        "Project Brief:",
+        form.message
+      ].join("\n")
+    )
 
-      const payload = await response.json()
+    window.location.href = `mailto:Konarr2025@hotmail.com?subject=${subject}&body=${body}`
 
-      if (!response.ok) {
-        throw new Error(payload.error || "Unable to send your message right now.")
-      }
-
-      setStatus({
-        type: "success",
-        message: `Thanks, ${form.name}. Your brief has been queued with reference ${payload.reference}.`
-      })
-      setForm(initialValues)
-    } catch (error) {
-      setStatus({
-        type: "error",
-        message: error.message || "Something went wrong while submitting the form."
-      })
-    } finally {
-      setLoading(false)
-    }
+    setStatus({
+      type: "success",
+      message: "Your email app has opened with your pre-filled project brief."
+    })
+    setLoading(false)
+    setForm(initialValues)
   }
 
   return (
@@ -136,7 +140,7 @@ export default function ContactForm() {
         disabled={loading}
         className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-konarr-accent px-6 py-3 text-sm font-semibold text-konarr-base transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-65"
       >
-        {loading ? "Submitting Brief..." : "Submit Project Brief"}
+        {loading ? "Preparing Email..." : "Submit Project Brief"}
       </button>
 
       {status.type !== "idle" && (

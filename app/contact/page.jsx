@@ -1,8 +1,15 @@
+import Image from "next/image"
 import ContactForm from "../../components/contact/ContactForm"
 
 export const metadata = {
   title: "Contact Konarr",
-  description: "Start a project conversation with Konarr."
+  description: "Start a project conversation with Konarr.",
+  alternates: {
+    canonical: "/contact"
+  },
+  openGraph: {
+    url: "https://konarrtech.shop/contact"
+  }
 }
 
 const contactDetails = [
@@ -31,6 +38,16 @@ export default function ContactPage() {
                 <p className="mt-1 text-sm text-konarr-text">{item.value}</p>
               </article>
             ))}
+          </div>
+
+          <div className="mt-6 overflow-hidden rounded-2xl border border-konarr-line bg-konarr-panelAlt">
+            <Image
+              src="/assets/konarr-logo-white.png"
+              alt="Konarr white logo"
+              width={960}
+              height={560}
+              className="h-44 w-full object-cover"
+            />
           </div>
         </div>
 

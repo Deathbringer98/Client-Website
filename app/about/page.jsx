@@ -1,8 +1,15 @@
+import Image from "next/image"
 import { process } from "../../lib/konarr-content"
 
 export const metadata = {
   title: "About Konarr",
-  description: "Learn how Konarr operates across engineering, design, software, and R&D divisions."
+  description: "Learn how Konarr operates across engineering, design, software, and R&D divisions.",
+  alternates: {
+    canonical: "/about"
+  },
+  openGraph: {
+    url: "https://konarrtech.shop/about"
+  }
 }
 
 const principles = [
@@ -23,13 +30,25 @@ const principles = [
 export default function AboutPage() {
   return (
     <section className="section-shell py-16 md:py-24">
-      <div className="max-w-4xl">
-        <span className="k-chip">About Konarr</span>
-        <h1 className="mt-6 text-4xl font-semibold leading-tight md:text-5xl">Built in Canada. Designed to deliver globally.</h1>
-        <p className="mt-5 text-base leading-relaxed text-konarr-muted md:text-lg">
-          Konarr started as a hands-on engineering initiative and evolved into a multi-division platform for technical delivery.
-          Today, our teams collaborate across motorsports, prototyping, digital systems, and product commercialization.
-        </p>
+      <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="max-w-3xl">
+          <span className="k-chip">About Konarr</span>
+          <h1 className="mt-6 text-4xl font-semibold leading-tight md:text-5xl">Built in Canada. Designed to deliver globally.</h1>
+          <p className="mt-5 text-base leading-relaxed text-konarr-muted md:text-lg">
+            Konarr started as a hands-on engineering initiative and evolved into a multi-division platform for technical delivery.
+            Today, our teams collaborate across motorsports, prototyping, digital systems, and product commercialization.
+          </p>
+        </div>
+
+        <div className="k-card overflow-hidden p-0">
+          <Image
+            src="/assets/konarr-stencil-board.jpg"
+            alt="Konarr stencil board"
+            width={1100}
+            height={760}
+            className="h-full min-h-64 w-full object-cover"
+          />
+        </div>
       </div>
 
       <div className="mt-10 grid gap-5 md:grid-cols-3">

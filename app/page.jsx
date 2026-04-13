@@ -2,15 +2,39 @@ import Image from "next/image"
 import Link from "next/link"
 import { divisions, process, services, stats } from "../lib/konarr-content"
 
-const heroImage =
-  "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=80"
+export const metadata = {
+  title: "Konarr | Engineering and Product Delivery",
+  description:
+    "Konarr unifies motorsport engineering, CAD + additive manufacturing, software-hardware development, and applied R&D.",
+  alternates: {
+    canonical: "/"
+  },
+  openGraph: {
+    url: "https://konarrtech.shop/"
+  }
+}
+
+const heroImage = "/assets/racing-konarr.png"
+const heroWordmark = "/assets/konarr-logotype.png"
+const mapleTexture = "/assets/canada-flag-bw.png"
 
 export default function HomePage() {
   return (
     <>
       <section className="section-shell pb-16 pt-16 md:pb-24 md:pt-24">
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
-          <div className="reveal">
+          <div className="reveal relative">
+            <div className="pointer-events-none absolute -left-6 top-3 opacity-10">
+              <Image src={mapleTexture} alt="" width={240} height={240} className="h-auto w-40" />
+            </div>
+            <Image
+              src={heroWordmark}
+              alt="Konarr wordmark"
+              width={520}
+              height={120}
+              className="relative z-10 h-auto w-[280px] md:w-[420px]"
+              priority
+            />
             <span className="k-chip">Calgary Born. Global Delivery.</span>
             <h1 className="k-title mt-6 font-[var(--font-title)]">
               We engineer products that move from concept to performance.
@@ -100,6 +124,40 @@ export default function HomePage() {
               </ul>
             </article>
           ))}
+        </div>
+
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <article className="k-card overflow-hidden p-0">
+            <Image
+              src="/assets/labs-3dprint.png"
+              alt="Konarr Labs 3D printing workflow"
+              width={1200}
+              height={700}
+              className="h-56 w-full object-cover"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-semibold">Rapid Prototype Infrastructure</h3>
+              <p className="mt-2 text-sm text-konarr-muted">
+                In-house additive capability shortens validation cycles and gives teams faster decision windows.
+              </p>
+            </div>
+          </article>
+
+          <article className="k-card overflow-hidden p-0">
+            <Image
+              src="/assets/silicon-wafer.png"
+              alt="Konarr Silicon development"
+              width={1200}
+              height={700}
+              className="h-56 w-full object-cover"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-semibold">Software + Hardware Delivery</h3>
+              <p className="mt-2 text-sm text-konarr-muted">
+                Konarr Silicon bridges firmware, software, and product interfaces into cohesive operational systems.
+              </p>
+            </div>
+          </article>
         </div>
       </section>
 

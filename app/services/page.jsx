@@ -1,8 +1,15 @@
+import Image from "next/image"
 import { divisions, services } from "../../lib/konarr-content"
 
 export const metadata = {
   title: "Konarr Services",
-  description: "Explore Konarr divisions, service lines, and product delivery capabilities."
+  description: "Explore Konarr divisions, service lines, and product delivery capabilities.",
+  alternates: {
+    canonical: "/services"
+  },
+  openGraph: {
+    url: "https://konarrtech.shop/services"
+  }
 }
 
 const offerings = [
@@ -52,6 +59,21 @@ export default function ServicesPage() {
             <p className="mt-4 text-xs uppercase tracking-[0.16em] text-konarr-signal">{offering.fit}</p>
           </article>
         ))}
+      </div>
+
+      <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <article className="k-card overflow-hidden p-0">
+          <Image src="/assets/3dprintedkonarr.png" alt="Konarr custom print" width={900} height={620} className="h-52 w-full object-cover" />
+          <div className="p-5 text-sm text-konarr-muted">Additive manufacturing and custom part workflows.</div>
+        </article>
+        <article className="k-card overflow-hidden p-0">
+          <Image src="/assets/rckonarr.png" alt="Konarr motorsport model" width={900} height={620} className="h-52 w-full object-cover" />
+          <div className="p-5 text-sm text-konarr-muted">Track-oriented prototyping and design validation.</div>
+        </article>
+        <article className="k-card overflow-hidden p-0">
+          <Image src="/assets/konarrwaferlogo.png" alt="Konarr Silicon identity" width={900} height={620} className="h-52 w-full object-cover" />
+          <div className="p-5 text-sm text-konarr-muted">Software plus hardware systems under unified QA standards.</div>
+        </article>
       </div>
 
       <div className="mt-12 rounded-3xl border border-konarr-line bg-konarr-panelAlt p-8">

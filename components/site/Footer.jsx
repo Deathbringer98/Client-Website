@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 
 const footerLinks = [
@@ -11,7 +12,7 @@ export default function Footer() {
     <footer className="border-t border-konarr-line/70 bg-konarr-panelAlt">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 md:grid-cols-3 md:px-10">
         <div>
-          <h3 className="text-lg font-semibold text-konarr-text">Konarr</h3>
+          <Image src="/assets/konarr-logotype.png" alt="Konarr logotype" width={220} height={48} className="h-auto w-40 md:w-44" />
           <p className="mt-3 max-w-sm text-sm text-konarr-muted">
             Canadian-born engineering group integrating product design, software, and applied R&D for teams that need momentum.
           </p>

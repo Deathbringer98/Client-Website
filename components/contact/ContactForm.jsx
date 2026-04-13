@@ -7,7 +7,8 @@ const initialValues = {
   email: "",
   company: "",
   division: "Konarr Labs",
-  message: ""
+  message: "",
+  website: ""
 }
 
 export default function ContactForm() {
@@ -115,6 +116,18 @@ export default function ContactForm() {
           value={form.message}
           onChange={handleChange}
           required
+        />
+      </label>
+
+      <label className="hidden" aria-hidden="true">
+        Website
+        <input
+          tabIndex={-1}
+          autoComplete="off"
+          type="text"
+          name="website"
+          value={form.website}
+          onChange={handleChange}
         />
       </label>
 

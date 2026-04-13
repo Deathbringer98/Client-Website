@@ -1,0 +1,35 @@
+
+> konarr-site@0.2.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+  - Environments: .env
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/9) ...
+   Generating static pages (2/9) 
+   Generating static pages (4/9) 
+   Generating static pages (6/9) 
+ ✓ Generating static pages (9/9)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    185 B           101 kB
+├ ○ /_not-found                          873 B          88.2 kB
+├ ○ /about                               178 B          92.7 kB
+├ ○ /contact                             1.35 kB        93.9 kB
+├ ○ /robots.txt                          0 B                0 B
+├ ○ /services                            178 B          92.7 kB
+└ ○ /sitemap.xml                         0 B                0 B
++ First Load JS shared by all            87.4 kB
+  ├ chunks/117-296a35f9ccea5534.js       31.8 kB
+  ├ chunks/fd9d1056-3eee857bde8f3b06.js  53.6 kB
+  └ other shared chunks (total)          1.89 kB
+
+
+○  (Static)  prerendered as static content
+

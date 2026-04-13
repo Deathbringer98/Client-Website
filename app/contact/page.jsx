@@ -42,7 +42,7 @@ export default function ContactPage() {
 
           <div className="mt-6 overflow-hidden rounded-2xl border border-konarr-line bg-konarr-panelAlt">
             <Image
-              src="/assets/konarr-logo-sticker.png"
+              src="/assets/konarr-logotype.png"
               alt="Konarr white logo"
               width={960}
               height={560}

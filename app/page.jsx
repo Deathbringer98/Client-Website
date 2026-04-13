@@ -191,17 +191,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <footer className="section-shell pb-8 pt-4 text-center text-xs text-konarr-muted">
-        powered by{" "}
-        <a
-          href="https://www.linkedin.com/in/matthew-menchinton-a24019282/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline hover:text-konarr-accent"
-        >
-          https://www.linkedin.com/in/matthew-menchinton-a24019282/
-        </a>
-      </footer>
     </>
   )
 }

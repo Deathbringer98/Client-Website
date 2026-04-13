@@ -42,7 +42,15 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-konarr-line/70 px-6 py-4 text-center text-xs text-konarr-muted md:px-10">
-        (c) {new Date().getFullYear()} Konarr. All rights reserved.
+        (c) {new Date().getFullYear()} Konarr. All rights reserved. &middot; powered by{" "}
+        <a
+          href="https://www.linkedin.com/in/matthew-menchinton-a24019282/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-konarr-accent"
+        >
+          Matthew Menchinton
+        </a>
       </div>
     </footer>
   )

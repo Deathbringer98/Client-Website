@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-konarr-base text-konarr-text antialiased;
+  background-image:
+    radial-gradient(circle at 12% 10%, rgba(66, 212, 255, 0.14), transparent 36%),
+    radial-gradient(circle at 88% 78%, rgba(246, 183, 60, 0.12), transparent 30%),
+    linear-gradient(180deg, #0b1215 0%, #0a1013 46%, #0a1114 100%);
+}
+
+.grid-overlay {
+  background-image: linear-gradient(rgba(37, 64, 77, 0.26) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 64, 77, 0.26) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.section-shell {
+  @apply mx-auto max-w-7xl px-6 md:px-10;
+}
+
+.k-chip {
+  @apply inline-flex items-center rounded-full border border-konarr-line bg-konarr-panelAlt px-4 py-2 text-xs uppercase tracking-[0.16em] text-konarr-muted;
+}
+
+.k-title {
+  @apply text-3xl font-semibold leading-tight md:text-5xl;
+}
+
+.k-subtitle {
+  @apply mt-4 max-w-2xl text-base text-konarr-muted md:text-lg;
+}
+
+.k-card {
+  @apply rounded-3xl border border-konarr-line bg-konarr-panel p-6 shadow-panel;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: rise-in 0.7s ease-out both;
+}

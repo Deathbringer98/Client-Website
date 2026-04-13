@@ -13,7 +13,7 @@ export const metadata = {
 }
 
 const contactDetails = [
-  { label: "Headquarters", value: "Calgary, Alberta, Canada" },
+  { label: "Headquarters", value: "Ontario, Canada" },
   { label: "Primary Inbox", value: "Konarr2025@hotmail.com" },
   { label: "Preferred Response Window", value: "Within 1-2 business days" },
   { label: "Engagement Types", value: "Consulting, prototyping, and full delivery" }
@@ -42,7 +42,7 @@ export default function ContactPage() {
 
           <div className="mt-6 overflow-hidden rounded-2xl border border-konarr-line bg-konarr-panelAlt">
             <Image
-              src="/assets/konarr-logo-white.png"
+              src="/assets/konarr-logo-sticker.png"
               alt="Konarr white logo"
               width={960}
               height={560}

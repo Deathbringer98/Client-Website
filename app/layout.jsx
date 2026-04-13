@@ -71,10 +71,14 @@ const organizationSchema = {
   url: "https://konarrtech.shop",
   logo: "https://konarrtech.shop/assets/konarr-logo-white.png",
   email: "Konarr2025@hotmail.com",
+  founder: {
+    "@type": "Person",
+    name: "Jordan Sullivan"
+  },
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Calgary",
-    addressRegion: "AB",
+    addressLocality: "Ontario",
+    addressRegion: "ON",
     addressCountry: "CA"
   },
   sameAs: ["https://github.com/Deathbringer98/Client-Website"]

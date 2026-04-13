@@ -35,7 +35,7 @@ export default function HomePage() {
               className="relative z-10 h-auto w-[280px] md:w-[420px]"
               priority
             />
-            <span className="k-chip">Calgary Born. Global Delivery.</span>
+            <span className="k-chip">Ontario HQ. Global Delivery.</span>
             <h1 className="k-title mt-6 font-[var(--font-title)]">
               We engineer products that move from concept to performance.
             </h1>

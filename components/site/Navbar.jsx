@@ -20,7 +20,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-konarr-line/70 bg-konarr-base/85 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
         <Link href="/" className="group inline-flex items-center gap-3">
-          <Image src="/assets/konarr-logo-white.png" alt="Konarr logo" width={40} height={40} className="h-10 w-10 rounded-lg border border-konarr-line bg-konarr-panel p-1" />
+          <Image src="/assets/konarr-logo-sticker.png" alt="Konarr logo" width={40} height={40} className="h-10 w-10 rounded-lg border border-konarr-line bg-konarr-panel p-1" />
           <div>
             <Image src="/assets/konarr-logotype.png" alt="Konarr wordmark" width={180} height={40} className="h-auto w-36 md:w-40" />
             <p className="text-xs uppercase tracking-[0.18em] text-konarr-muted">Build. Test. Ship.</p>

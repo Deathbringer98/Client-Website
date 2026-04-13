@@ -33,9 +33,10 @@ export default function AboutPage() {
       <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="max-w-3xl">
           <span className="k-chip">About Konarr</span>
-          <h1 className="mt-6 text-4xl font-semibold leading-tight md:text-5xl">Built in Canada. Designed to deliver globally.</h1>
+          <h1 className="mt-6 text-4xl font-semibold leading-tight md:text-5xl">Founded in Ontario, Canada. Built to deliver globally.</h1>
           <p className="mt-5 text-base leading-relaxed text-konarr-muted md:text-lg">
-            Konarr started as a hands-on engineering initiative and evolved into a multi-division platform for technical delivery.
+            Konarr was founded in Ontario, Canada by CEO Jordan Sullivan, born from a passion for 3D printing,
+            engineering, and inventing. What began as a hands-on initiative has evolved into a multi-division platform for technical delivery.
             Today, our teams collaborate across motorsports, prototyping, digital systems, and product commercialization.
           </p>
         </div>

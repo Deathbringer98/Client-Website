@@ -14,7 +14,8 @@ export default function Footer() {
         <div>
           <Image src="/assets/konarr-logotype.png" alt="Konarr logotype" width={220} height={48} className="h-auto w-40 md:w-44" />
           <p className="mt-3 max-w-sm text-sm text-konarr-muted">
-            Canadian-born engineering group integrating product design, software, and applied R&D for teams that need momentum.
+            Founded in Ontario, Canada by CEO Jordan Sullivan from a passion for 3D printing, engineering,
+            and inventing. Konarr integrates product design, software, and applied R&D for teams that need momentum.
           </p>
         </div>
 
@@ -33,7 +34,7 @@ export default function Footer() {
 
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-[0.16em] text-konarr-muted">Contact</h4>
-          <p className="mt-4 text-sm text-konarr-text">Calgary, Alberta, Canada</p>
+          <p className="mt-4 text-sm text-konarr-text">Ontario, Canada</p>
           <a href="mailto:Konarr2025@hotmail.com" className="mt-2 block text-sm text-konarr-accent hover:underline">
             Konarr2025@hotmail.com
           </a>

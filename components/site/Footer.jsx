@@ -38,6 +38,14 @@ export default function Footer() {
           <a href="mailto:Konarr2025@hotmail.com" className="mt-2 block text-sm text-konarr-accent hover:underline">
             Konarr2025@hotmail.com
           </a>
+          <a
+            href="https://www.linkedin.com/in/matthew-menchinton-a24019282/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 block text-sm text-konarr-accent hover:underline"
+          >
+            LinkedIn: Matthew Menchinton
+          </a>
           <p className="mt-5 text-xs text-konarr-muted">Designed for performance. Built for scale.</p>
         </div>
       </div>
